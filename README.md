@@ -5,7 +5,7 @@ In this project i was given a web-based application that reads RSS feeds. And us
 ## Steps to run the project
 * Download the github repository of this project and the application locally.
 Or 
-* Try running the project from this [online Link]().
+* Try running the project from this [online Link](https://nadamabrouk.github.io/Feedreader-master-Jasmine/).
 
 # Test Cases included
 1. A test that loops through each feed in the `allFeeds` object and ensures it has a URL defined and that the URL is not empty.
