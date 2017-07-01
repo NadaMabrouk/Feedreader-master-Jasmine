@@ -2,8 +2,8 @@
 
 In this project i was given a web-based application that reads RSS feeds. And using [Jasmine](http://jasmine.github.io/) i started writing test suite. 
 
-## Steps to run the project
-* Download the github repository of this project and the application locally.
+## Documentation
+* Download the github repository of this project on your machine or clone it from the github, then run it from `index.html` document.
 Or 
 * Try running the project from this [online Link](https://nadamabrouk.github.io/Feedreader-master-Jasmine/).
 
