@@ -31,9 +31,10 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-         it('all feeds has url',function () {
+         it('all feeds has url and not empty',function () {
             allFeeds.forEach( function(element) {
                 expect(element.url).toBeDefined();
+                expect(element.url).not.toEqual('');
             });
          });
 
@@ -61,8 +62,7 @@ $(function() {
          * hiding/showing of the menu element.
          */
          it('The menu element is hidden by default', function(){
-            var bd = $('body');
-            expect(bd.hasClass('menu-hidden')).toBe(true);
+            expect(document.body.classList).toContain('menu-hidden');
          });
 
          /* TODO: Write a test that ensures the menu changes
@@ -72,9 +72,9 @@ $(function() {
           */
           it('changes visibility when clicked',function(){
             $('a.menu-icon-link').click();
-            expect(document.body.className).not.toContain('menu-hidden');
+            expect(document.body.classList).not.toContain('menu-hidden');
             $('a.menu-icon-link').click();
-            expect(document.body.className).toContain('menu-hidden');
+            expect(document.body.classList).toContain('menu-hidden');
           });
 
     });
@@ -90,7 +90,7 @@ $(function() {
             loadFeed(1,done);
          });
          it('The Loadfeed is called and completes its work',function(){
-            expect($('.feed').length).not.toEqual(0);
+            expect($('.feed .entry').length).not.toEqual(0);
          });
     });
 
